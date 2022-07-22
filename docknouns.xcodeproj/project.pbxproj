@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		345518D028873D1700A4BE31 /* SVGView in Frameworks */ = {isa = PBXBuildFile; productRef = 345518CF28873D1700A4BE31 /* SVGView */; };
+		345518DA2887549200A4BE31 /* web3swift in Frameworks */ = {isa = PBXBuildFile; productRef = 345518D92887549200A4BE31 /* web3swift */; };
+		345518DD2887686B00A4BE31 /* auctionHouseABI.json in Resources */ = {isa = PBXBuildFile; fileRef = 345518DB2887686A00A4BE31 /* auctionHouseABI.json */; };
+		345518DE2887686B00A4BE31 /* nounsABI.json in Resources */ = {isa = PBXBuildFile; fileRef = 345518DC2887686A00A4BE31 /* nounsABI.json */; };
 		345539732886223C00D123F9 /* docknounsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345539722886223C00D123F9 /* docknounsApp.swift */; };
 		345539752886223C00D123F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345539742886223C00D123F9 /* ContentView.swift */; };
 		345539772886223F00D123F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345539762886223F00D123F9 /* Assets.xcassets */; };
@@ -14,6 +18,8 @@
 		345539852886223F00D123F9 /* docknounsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345539842886223F00D123F9 /* docknounsTests.swift */; };
 		3455398F2886223F00D123F9 /* docknounsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3455398E2886223F00D123F9 /* docknounsUITests.swift */; };
 		345539912886223F00D123F9 /* docknounsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345539902886223F00D123F9 /* docknounsUITestsLaunchTests.swift */; };
+		34E682D828889B60009DB021 /* appicon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 34E682D728889B60009DB021 /* appicon.svg */; };
+		34E682DA2888A1BF009DB021 /* DockIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E682D92888A1BF009DB021 /* DockIconView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		345518DB2887686A00A4BE31 /* auctionHouseABI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = auctionHouseABI.json; sourceTree = "<group>"; };
+		345518DC2887686A00A4BE31 /* nounsABI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nounsABI.json; sourceTree = "<group>"; };
+		345518DF28877D2D00A4BE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3455396F2886223C00D123F9 /* docknouns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = docknouns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		345539722886223C00D123F9 /* docknounsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = docknounsApp.swift; sourceTree = "<group>"; };
 		345539742886223C00D123F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +54,8 @@
 		3455398A2886223F00D123F9 /* docknounsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = docknounsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3455398E2886223F00D123F9 /* docknounsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = docknounsUITests.swift; sourceTree = "<group>"; };
 		345539902886223F00D123F9 /* docknounsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = docknounsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		34E682D728889B60009DB021 /* appicon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = appicon.svg; sourceTree = "<group>"; };
+		34E682D92888A1BF009DB021 /* DockIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockIconView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				345518D028873D1700A4BE31 /* SVGView in Frameworks */,
+				345518DA2887549200A4BE31 /* web3swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +108,13 @@
 		345539712886223C00D123F9 /* docknouns */ = {
 			isa = PBXGroup;
 			children = (
+				34E682D728889B60009DB021 /* appicon.svg */,
+				345518DF28877D2D00A4BE31 /* Info.plist */,
+				345518DB2887686A00A4BE31 /* auctionHouseABI.json */,
+				345518DC2887686A00A4BE31 /* nounsABI.json */,
 				345539722886223C00D123F9 /* docknounsApp.swift */,
 				345539742886223C00D123F9 /* ContentView.swift */,
+				34E682D92888A1BF009DB021 /* DockIconView.swift */,
 				345539762886223F00D123F9 /* Assets.xcassets */,
 				3455397B2886223F00D123F9 /* docknouns.entitlements */,
 				345539782886223F00D123F9 /* Preview Content */,
@@ -145,6 +163,10 @@
 			dependencies = (
 			);
 			name = docknouns;
+			packageProductDependencies = (
+				345518CF28873D1700A4BE31 /* SVGView */,
+				345518D92887549200A4BE31 /* web3swift */,
+			);
 			productName = docknouns;
 			productReference = 3455396F2886223C00D123F9 /* docknouns.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +239,10 @@
 				Base,
 			);
 			mainGroup = 345539662886223C00D123F9;
+			packageReferences = (
+				345518CE28873D1700A4BE31 /* XCRemoteSwiftPackageReference "SVGView" */,
+				345518D82887549200A4BE31 /* XCRemoteSwiftPackageReference "web3swift" */,
+			);
 			productRefGroup = 345539702886223C00D123F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +259,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				345518DE2887686B00A4BE31 /* nounsABI.json in Resources */,
 				3455397A2886223F00D123F9 /* Preview Assets.xcassets in Resources */,
+				34E682D828889B60009DB021 /* appicon.svg in Resources */,
+				345518DD2887686B00A4BE31 /* auctionHouseABI.json in Resources */,
 				345539772886223F00D123F9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +290,7 @@
 			files = (
 				345539752886223C00D123F9 /* ContentView.swift in Sources */,
 				345539732886223C00D123F9 /* docknounsApp.swift in Sources */,
+				34E682DA2888A1BF009DB021 /* DockIconView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,8 +452,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"docknouns/Preview Content\"";
+				DEVELOPMENT_TEAM = 752YP948PV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = docknouns/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,8 +479,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"docknouns/Preview Content\"";
+				DEVELOPMENT_TEAM = 752YP948PV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = docknouns/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,6 +604,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		345518CE28873D1700A4BE31 /* XCRemoteSwiftPackageReference "SVGView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/SVGView.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		345518D82887549200A4BE31 /* XCRemoteSwiftPackageReference "web3swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/skywinder/web3swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		345518CF28873D1700A4BE31 /* SVGView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 345518CE28873D1700A4BE31 /* XCRemoteSwiftPackageReference "SVGView" */;
+			productName = SVGView;
+		};
+		345518D92887549200A4BE31 /* web3swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 345518D82887549200A4BE31 /* XCRemoteSwiftPackageReference "web3swift" */;
+			productName = web3swift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 345539672886223C00D123F9 /* Project object */;
 }
