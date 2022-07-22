@@ -17,6 +17,8 @@ enum NounType {
 
 class NounsViewModel: ObservableObject, Web3SocketDelegate {
 
+    @EnvironmentObject private var appDelegate: AppDelegate
+
     private var socketProvider: InfuraWebsocketProvider!
     
     // model
@@ -169,61 +171,62 @@ class NounsViewModel: ObservableObject, Web3SocketDelegate {
     }
 }
 
-class AppDelegate: NSObject, NSApplicationDelegate, WKNavigationDelegate {
-    
-    private var statusItem: NSStatusItem!
+class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
+    @Published var viewModel: NounsViewModel
+    var statusItem: NSStatusItem!
     private var popover: NSPopover!
-    private var nounsViewModel: NounsViewModel!
+    
+    override init() {
+        self.viewModel = NounsViewModel()
+    }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let window = NSApplication.shared.windows.first {
             window.orderOut(self)
         }
         
-        nounsViewModel = NounsViewModel()
-        
-        Task {
-            await nounsViewModel.fetchCurrentAuction()
-            self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-            
-            if let statusButton = self.statusItem.button {
-                DispatchQueue.main.async {
-                    statusButton.title = String(format: "%@ %@: %@ | %@", self.nounsViewModel.nounType == NounType.nouns ? "Noun" : "lilnoun", self.nounsViewModel.nounId, self.nounsViewModel.amount, self.nounsViewModel.getFormattedTimeLeft())
-                    statusButton.action = #selector(self.togglePopover)
-                    statusButton.sendAction(on: [.leftMouseUp, .rightMouseUp])
-                }
-            }
-
-            let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(refreshTitle), userInfo: nil, repeats: true)
-            timer.fire()
+        self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        if let statusButton = self.statusItem.button {
+            statusButton.action = #selector(self.togglePopover)
+            statusButton.sendAction(on: [.leftMouseUp, .rightMouseUp])
         }
         
+        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(refreshTitle), userInfo: nil, repeats: true)
+        timer.fire()
+
         popover = NSPopover()
         popover.contentSize = NSSize(width: 300, height: 300)
         popover.behavior = .transient
-        popover.contentViewController = NSHostingController(rootView: ContentView(viewModel: nounsViewModel))
-        
-        let dockIconView = DockIconView(viewModel: nounsViewModel)
-        NSApp.dockTile.contentView = NSHostingView(rootView: dockIconView)
-        NSApp.dockTile.display()
+        popover.contentViewController = NSHostingController(rootView: ContentView(viewModel: viewModel))
+    }
+    
+    @objc func refreshTitle() {
+        if let statusButton = self.statusItem.button {
+            if self.viewModel.nounId != nil {
+                statusButton.title = String(
+                    format: "%@ %@: %@ | %@",
+                    self.viewModel.nounType == NounType.nouns ? "Noun" : "lilnoun",
+                    self.viewModel.nounId,
+                    self.viewModel.amount,
+                    self.viewModel.getFormattedTimeLeft()
+                )
+            }
+        }
     }
     
     @objc func togglePopover(sender: NSStatusItem) {
-        
-//        let event = NSApp.currentEvent!
-        
         print(NSEvent.modifierFlags.contains(.option))
-        
+
         if NSEvent.modifierFlags.contains(.option) {
             // toggle noun type
-            if (nounsViewModel.nounType == NounType.nouns) {
-                nounsViewModel.setNounType(newNounType: NounType.lilnouns)
+            if (viewModel.nounType == NounType.nouns) {
+                viewModel.setNounType(newNounType: NounType.lilnouns)
             } else {
-                nounsViewModel.setNounType(newNounType: NounType.nouns)
+                viewModel.setNounType(newNounType: NounType.nouns)
             }
             return
         }
-        
+
         print("toggling popover")
         if let statusButton = self.statusItem.button {
             if popover.isShown {
@@ -233,21 +236,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, WKNavigationDelegate {
             }
         }
     }
-    
-    @objc func refreshTitle() {
-        if let statusButton = self.statusItem.button {
-            statusButton.title = String(format: "%@ %@: %@ | %@", self.nounsViewModel.nounType == NounType.nouns ? "Noun" : "lilnoun", self.nounsViewModel.nounId, self.nounsViewModel.amount, self.nounsViewModel.getFormattedTimeLeft())
-        }
-    }
 }
 
 @main
 struct docknounsApp: App {
-    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate: AppDelegate
     
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: NounsViewModel()).frame(width: 300, height: 300)
+            ContentView(viewModel: appDelegate.viewModel).frame(width: 300, height: 300)
         }
     }
 }
