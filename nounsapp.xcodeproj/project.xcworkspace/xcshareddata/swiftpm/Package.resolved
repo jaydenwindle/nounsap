@@ -1,0 +1,61 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BigInt",
+        "repositoryURL": "https://github.com/attaswift/BigInt.git",
+        "state": {
+          "branch": null,
+          "revision": "0ed110f7555c34ff468e72e1686e59721f2b0da6",
+          "version": "5.3.0"
+        }
+      },
+      {
+        "package": "CryptoSwift",
+        "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "039f56c5d7960f277087a0be51f5eb04ed0ec073",
+          "version": "1.5.1"
+        }
+      },
+      {
+        "package": "PromiseKit",
+        "repositoryURL": "https://github.com/mxcl/PromiseKit.git",
+        "state": {
+          "branch": null,
+          "revision": "7b07b214dacecb22ca4b680531c7e981d52483f9",
+          "version": "6.16.3"
+        }
+      },
+      {
+        "package": "Starscream",
+        "repositoryURL": "https://github.com/daltoniam/Starscream.git",
+        "state": {
+          "branch": null,
+          "revision": "df8d82047f6654d8e4b655d1b1525c64e1059d21",
+          "version": "4.0.4"
+        }
+      },
+      {
+        "package": "SVGView",
+        "repositoryURL": "https://github.com/exyte/SVGView.git",
+        "state": {
+          "branch": "main",
+          "revision": "bcc3e54051acd94df1c54522815e6688ac9d6966",
+          "version": null
+        }
+      },
+      {
+        "package": "Web3swift",
+        "repositoryURL": "https://github.com/skywinder/web3swift",
+        "state": {
+          "branch": null,
+          "revision": "4312a7178e1255c3ef65ac909657d29f6dd81bb6",
+          "version": "2.6.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

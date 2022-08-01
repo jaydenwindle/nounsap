@@ -81,7 +81,9 @@ class NounsViewModel: ObservableObject, Web3SocketDelegate {
             if let nounId = auctionResult["nounId"] {
                 let nounIdString = Web3.Utils.formatToPrecision(nounId as! BigUInt, numberDecimals: 0)!
                 if nounIdString != self.nounId {
-                    await fetchNounImage(nounId: nounIdString)
+                    Task.detached {
+                        await self.fetchNounImage(nounId: nounIdString)
+                    }
                 }
                 await MainActor.run {
                     self.nounId = nounIdString

@@ -43,15 +43,15 @@
 		345518DB2887686A00A4BE31 /* auctionHouseABI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = auctionHouseABI.json; sourceTree = "<group>"; };
 		345518DC2887686A00A4BE31 /* nounsABI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nounsABI.json; sourceTree = "<group>"; };
 		345518DF28877D2D00A4BE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		3455396F2886223C00D123F9 /* docknouns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = docknouns.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3455396F2886223C00D123F9 /* nouns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nouns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		345539722886223C00D123F9 /* docknounsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = docknounsApp.swift; sourceTree = "<group>"; };
 		345539742886223C00D123F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		345539762886223F00D123F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		345539792886223F00D123F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3455397B2886223F00D123F9 /* docknouns.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = docknouns.entitlements; sourceTree = "<group>"; };
-		345539802886223F00D123F9 /* docknounsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = docknounsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		345539802886223F00D123F9 /* nounsappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nounsappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		345539842886223F00D123F9 /* docknounsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = docknounsTests.swift; sourceTree = "<group>"; };
-		3455398A2886223F00D123F9 /* docknounsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = docknounsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3455398A2886223F00D123F9 /* nounsappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nounsappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3455398E2886223F00D123F9 /* docknounsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = docknounsUITests.swift; sourceTree = "<group>"; };
 		345539902886223F00D123F9 /* docknounsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = docknounsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		34E682D728889B60009DB021 /* appicon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = appicon.svg; sourceTree = "<group>"; };
@@ -98,9 +98,9 @@
 		345539702886223C00D123F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3455396F2886223C00D123F9 /* docknouns.app */,
-				345539802886223F00D123F9 /* docknounsTests.xctest */,
-				3455398A2886223F00D123F9 /* docknounsUITests.xctest */,
+				3455396F2886223C00D123F9 /* nouns.app */,
+				345539802886223F00D123F9 /* nounsappTests.xctest */,
+				3455398A2886223F00D123F9 /* nounsappUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3455396E2886223C00D123F9 /* docknouns */ = {
+		3455396E2886223C00D123F9 /* nounsapp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 345539942886223F00D123F9 /* Build configuration list for PBXNativeTarget "docknouns" */;
+			buildConfigurationList = 345539942886223F00D123F9 /* Build configuration list for PBXNativeTarget "nounsapp" */;
 			buildPhases = (
 				3455396B2886223C00D123F9 /* Sources */,
 				3455396C2886223C00D123F9 /* Frameworks */,
@@ -162,18 +162,18 @@
 			);
 			dependencies = (
 			);
-			name = docknouns;
+			name = nounsapp;
 			packageProductDependencies = (
 				345518CF28873D1700A4BE31 /* SVGView */,
 				345518D92887549200A4BE31 /* web3swift */,
 			);
 			productName = docknouns;
-			productReference = 3455396F2886223C00D123F9 /* docknouns.app */;
+			productReference = 3455396F2886223C00D123F9 /* nouns.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3455397F2886223F00D123F9 /* docknounsTests */ = {
+		3455397F2886223F00D123F9 /* nounsappTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 345539972886223F00D123F9 /* Build configuration list for PBXNativeTarget "docknounsTests" */;
+			buildConfigurationList = 345539972886223F00D123F9 /* Build configuration list for PBXNativeTarget "nounsappTests" */;
 			buildPhases = (
 				3455397C2886223F00D123F9 /* Sources */,
 				3455397D2886223F00D123F9 /* Frameworks */,
@@ -184,14 +184,14 @@
 			dependencies = (
 				345539822886223F00D123F9 /* PBXTargetDependency */,
 			);
-			name = docknounsTests;
+			name = nounsappTests;
 			productName = docknounsTests;
-			productReference = 345539802886223F00D123F9 /* docknounsTests.xctest */;
+			productReference = 345539802886223F00D123F9 /* nounsappTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		345539892886223F00D123F9 /* docknounsUITests */ = {
+		345539892886223F00D123F9 /* nounsappUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3455399A2886223F00D123F9 /* Build configuration list for PBXNativeTarget "docknounsUITests" */;
+			buildConfigurationList = 3455399A2886223F00D123F9 /* Build configuration list for PBXNativeTarget "nounsappUITests" */;
 			buildPhases = (
 				345539862886223F00D123F9 /* Sources */,
 				345539872886223F00D123F9 /* Frameworks */,
@@ -202,9 +202,9 @@
 			dependencies = (
 				3455398C2886223F00D123F9 /* PBXTargetDependency */,
 			);
-			name = docknounsUITests;
+			name = nounsappUITests;
 			productName = docknounsUITests;
-			productReference = 3455398A2886223F00D123F9 /* docknounsUITests.xctest */;
+			productReference = 3455398A2886223F00D123F9 /* nounsappUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -230,7 +230,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3455396A2886223C00D123F9 /* Build configuration list for PBXProject "docknouns" */;
+			buildConfigurationList = 3455396A2886223C00D123F9 /* Build configuration list for PBXProject "nounsapp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -247,9 +247,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3455396E2886223C00D123F9 /* docknouns */,
-				3455397F2886223F00D123F9 /* docknounsTests */,
-				345539892886223F00D123F9 /* docknounsUITests */,
+				3455396E2886223C00D123F9 /* nounsapp */,
+				3455397F2886223F00D123F9 /* nounsappTests */,
+				345539892886223F00D123F9 /* nounsappUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,12 +316,12 @@
 /* Begin PBXTargetDependency section */
 		345539822886223F00D123F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3455396E2886223C00D123F9 /* docknouns */;
+			target = 3455396E2886223C00D123F9 /* nounsapp */;
 			targetProxy = 345539812886223F00D123F9 /* PBXContainerItemProxy */;
 		};
 		3455398C2886223F00D123F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3455396E2886223C00D123F9 /* docknouns */;
+			target = 3455396E2886223C00D123F9 /* nounsapp */;
 			targetProxy = 3455398B2886223F00D123F9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -462,8 +462,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.docknouns.docknouns;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.windle.nounsapp;
+				PRODUCT_NAME = nouns;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -489,8 +489,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.docknouns.docknouns;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.windle.nounsapp;
+				PRODUCT_NAME = nouns;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -510,7 +510,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/docknouns.app/Contents/MacOS/docknouns";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nounsapp.app/Contents/MacOS/nounsapp";
 			};
 			name = Debug;
 		};
@@ -528,7 +528,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/docknouns.app/Contents/MacOS/docknouns";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nounsapp.app/Contents/MacOS/nounsapp";
 			};
 			name = Release;
 		};
@@ -567,7 +567,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3455396A2886223C00D123F9 /* Build configuration list for PBXProject "docknouns" */ = {
+		3455396A2886223C00D123F9 /* Build configuration list for PBXProject "nounsapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				345539922886223F00D123F9 /* Debug */,
@@ -576,7 +576,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		345539942886223F00D123F9 /* Build configuration list for PBXNativeTarget "docknouns" */ = {
+		345539942886223F00D123F9 /* Build configuration list for PBXNativeTarget "nounsapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				345539952886223F00D123F9 /* Debug */,
@@ -585,7 +585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		345539972886223F00D123F9 /* Build configuration list for PBXNativeTarget "docknounsTests" */ = {
+		345539972886223F00D123F9 /* Build configuration list for PBXNativeTarget "nounsappTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				345539982886223F00D123F9 /* Debug */,
@@ -594,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3455399A2886223F00D123F9 /* Build configuration list for PBXNativeTarget "docknounsUITests" */ = {
+		3455399A2886223F00D123F9 /* Build configuration list for PBXNativeTarget "nounsappUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3455399B2886223F00D123F9 /* Debug */,
