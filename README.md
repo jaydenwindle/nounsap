@@ -1,5 +1,7 @@
 # Nouns.app - Nouns on MacOS
 
+### [Download (v0.1.0)](https://github.com/jaydenwindle/nounsapp/releases/download/v0.1.0/nouns.0.1.0.dmg)
+
 Nouns.app puts the noun of the day in your macos dock
 
 ![](https://github.com/jaydenwindle/nounsapp/blob/c43e4f7c17b43f99c7f8c1b32b289c3441fcdf34/dock.png)
